@@ -4,11 +4,10 @@
 
 int main(int argc, string argv[])
 {
-    int num = atoi(argv[1]);
 
-    if (argc == 2 && num)
+    if (argc == 2 && atoi(argv[1]))
     {
-        printf("Succes\n");
+        printf("Succes %s\n", argv[1]);
     }
     else
     {
