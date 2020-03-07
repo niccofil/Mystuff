@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
-
-    if (argc == 2 && atoi(argv[1]))
+    if (argc == 2)
     {
-        printf("Succes %s\n", argv[1]);
+        int k = atoi(argv[1]);
+        printf("%d\n", k);
     }
+
     else
     {
-        printf("Usage: ./caesar key\n");
+        printf("usage: ./caesar key\n");
     }
 }
