@@ -18,7 +18,16 @@ int main(int argc, string argv[])
 
         if (c > 0 && k > 0)
         {
-            printf("%i \n", k);
+            string text = get_string("plaintext:");
+            for (int j = 0; j < strlen(text); j++)
+            {
+                if (isalpha(text[j]) != 0 && islower(text[j]) != 0)
+                {
+                    int alpha = text[j] % 97;
+                    int ci = (alpha + k) % 26;
+                    printf("ciphertext: %i\n", ci);
+                }
+            }
         }
 
         else
