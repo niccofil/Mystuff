@@ -10,9 +10,24 @@ int main(int argc, string argv[])
     g_argv == argv[1];
     if (argc == 2) //accepting only 2 command line arguments
     {
-        if (condition(argv[1]) == false)
+        if (condition(argv[1]) != true) // accepts only correct key
         {
-            printf("good\n");
+            string text = get_string("plaintext:");
+            printf("ciphertext:");
+            int n = strlen(text);
+
+            for (int i = 0; i < n; i++)
+            {
+                if (islower(text[i]) != 0)
+                {
+                    int alpht = text[i] % 97;
+                }
+
+                if (isupper(text[i]) != 0)
+                {
+                    int alpht = text[i] % 65;
+                }
+            }
         }
     }
 
@@ -25,25 +40,23 @@ int main(int argc, string argv[])
 
 int condition(string g_argv) //Conditions for key
 {
-    int lenght = strlen(g_argv);
-    if (lenght != 26)
+    int length = strlen(g_argv);
+    if (true)
     {
-        printf("Key must contain only 26 characters\n");
-        return 1;
-    }
+        if (length != 26)
+        {
+            printf("Key must contain only 26 characters\n");
+            return 1;
+        }
 
-    else
-    {
-        for (int i = 0; i < lenght; i++)
+        for (int i = 0; i < length; i++)
         {
 
             if (isdigit(g_argv[i]) != 0)
             {
                 printf("Key must contain only alphabetical characters\n");
-                break;
+                return 1;
             }
         }
     }
-
-    return 1;
 }
