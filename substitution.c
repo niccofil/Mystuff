@@ -43,7 +43,7 @@ int main(int argc, string argv[])
                         }
                     }
 
-                    else if (j == alphtu)
+                    if (j == alphtu)
                     {
                         if (isupper(argv[1][j]) != 0)
                         {
