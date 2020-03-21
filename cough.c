@@ -18,6 +18,4 @@ void cough(int n)
     {
         printf("cough\n");
     }
-
-    printf("\n");
 }
