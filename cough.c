@@ -14,8 +14,20 @@ int main(void)
 
 void cough(int n)
 {
-    for (int i = 0; i < n; i++)
+    if (n == 0)
     {
-        printf("cough\n");
+        return;
+    }
+
+    else
+    {
+        cough(n - 1);
+
+        for (int i = 0; i < n; i++)
+        {
+            printf("#");
+        }
+
+        printf("\n");
     }
 }
