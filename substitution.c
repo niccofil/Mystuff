@@ -38,13 +38,13 @@ int main(int argc, string argv[])
         for (int j = 0; j < lenargv; j++) // counting number of key values
         {
 
-            if (j == alphtl && isupper(argv[1][j]) != 0) // ordinal value of key is equal to alphabetic value of  input text
+            if (alphtl == j && isupper(argv[1][j]) != 0) // ordinal value of key is equal to alphabetic value of  input text
             {
                 int low = argv[1][j] + 32;
                 printf("%c", low);
             }
 
-            if (j == alphtu && islower(argv[1][j]) != 0)
+            if (alphtu == j && islower(argv[1][j]) != 0)
             {
 
                 int up = argv[1][j] - 32;
@@ -60,30 +60,28 @@ int condition(string g_argv)
 
 {
     int length = strlen(g_argv);
-    if (true)
+
+    if (length != 26)
     {
-        if (length != 26)
+        printf("Key must contain only 26 characters\n");
+        return 1;
+    }
+
+    for (int i = 0; i < length; i++)
+    {
+
+        if (isdigit(g_argv[i]) != 0)
         {
-            printf("Key must contain only 26 characters\n");
+            printf("Key must contain only alphabetical characters\n");
             return 1;
         }
 
-        for (int i = 0; i < length; i++)
+        for (int j = 0; j < i; j++)
         {
-
-            if (isdigit(g_argv[i]) != 0)
+            if (g_argv[j] == g_argv[i])
             {
-                printf("Key must contain only alphabetical characters\n");
+                printf("Key must not contain repeated characters\n");
                 return 1;
-            }
-
-            for (int j = 0; j < i; j++)
-            {
-                if (g_argv[j] == g_argv[i])
-                {
-                    printf("Key must not contain repeated characters\n");
-                    return 1;
-                }
             }
         }
     }
