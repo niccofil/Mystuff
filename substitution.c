@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#include <stdbool.h>
 
 int condition(char* g_argv); // checking conditions for key
 int main(int argc, char* argv[])
@@ -13,18 +12,18 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    if (condition(argv[1]) == true)
+    if (condition(argv[1]) == 1)
     {
         return 1;
     }
 
     char text[20];
 
+    printf("plaintext:");
+    scanf ("%s", text);
+
     int lentex = strlen(text);     // length of input text
     int lenargv = strlen(argv[1]); // lenght of second cmd-line argument
-
-    printf("Plaintext:");
-    scanf ("%s", text);
 
     printf("ciphertext:");
 
@@ -57,13 +56,14 @@ int main(int argc, char* argv[])
     }
 
     printf("\n");
+
 }
 
 int condition(char* g_argv)
 
 {
     int length = strlen(g_argv);
-
+    
     if (length != 26)
     {
         printf("Key must contain only 26 characters\n");
@@ -91,3 +91,4 @@ int condition(char* g_argv)
 
     return 0;
 }
+
