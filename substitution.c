@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <cs50.h>
+
 #include <string.h>
 #include <ctype.h>
 
-int condition(string g_argv); // checking conditions for key
-int main(int argc, string argv[])
+int condition(char* g_argv); // checking conditions for key
+int main(int argc, char* argv[])
 {
 
     if (argc != 2) //accepting only 2 command line arguments
@@ -18,7 +18,9 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string text = get_string("plaintext:");
+    char* text[20];
+    printf("Plaintext:");
+    scanf ("%s", text)
 
     int lentex = strlen(text);     // length of input text
     int lenargv = strlen(argv[1]); // lenght of second cmd-line argument
@@ -56,7 +58,7 @@ int main(int argc, string argv[])
     printf("\n");
 }
 
-int condition(string g_argv)
+int condition(char* g_argv)
 
 {
     int length = strlen(g_argv);
