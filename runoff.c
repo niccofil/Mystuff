@@ -28,7 +28,6 @@ int candidate_count;
 // Candidates' names in voters' rank
 char name[30];
 
-
 // Function prototypes
 bool vote(int voter, int rank, char name[30]);
 void tabulate(void);
@@ -59,8 +58,6 @@ int main(int argc, char* argv[])
         candidates[i].votes = 0;
         candidates[i].eliminated = false;
     }
-    
-    char name[30];
     
     printf ("Number of voters:");
     scanf ("%i", &voter_count);
