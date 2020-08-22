@@ -60,8 +60,6 @@ int main(int argc, char* argv[])
         candidates[i].eliminated = false;
     }
     
-    char name[30];
-    
     printf ("Number of voters:");
     scanf ("%i", &voter_count);
 
