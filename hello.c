@@ -1,10 +1,38 @@
 #include <stdio.h>
+#include <string.h>
 
-int main (void)
+int main (int argc, char* argv[])
 {
-char name[20];
+if (argc != 2)
+{
+printf ("only 2 cmd line arguments are accepted\n");
+return 1;
+}
 
-printf ("Enter your name:");
+if (strcmp(argv[1], "astra") != 0)
+{
+printf ("you have to insert cmd name. It is not %s. It is actually astra\n", argv[1]);
+return 1;
+}
+
+char name[20];
+int age;
+
+printf ("Hi. I am Astra. What is your name?\n");
 scanf ("%s",name);
-printf ("Hello %s\n", name);
+printf ("Nice to meet you %s\n", name);
+
+printf ("How old are you?\n");
+scanf ("%i", &age);
+
+if (age > 60)
+{
+printf ("Almost like my grandpa\n");
+}
+
+else
+{
+printf("So young! Only %i years old!\n", age);
+}
+return 0;
 }
