@@ -5,13 +5,13 @@ int main (int argc, char* argv[])
 {
 if (argc != 2)
 {
-printf ("only 2 cmd line arguments are accepted\n");
+printf ("Please, insert the name of AI\n");
 return 1;
 }
 
 if (strcmp(argv[1], "astra") != 0)
 {
-printf ("you have to insert cmd name. It is not %s. It is actually astra\n", argv[1]);
+printf ("It is not %s. It is actually astra\n", argv[1]);
 return 1;
 }
 
