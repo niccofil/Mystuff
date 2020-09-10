@@ -4,13 +4,13 @@
 int main(int argc, char* argv[])
 {
 
-    if(argc != 2)
+    if (argc != 2)
     {
         printf("usage: temperature c/f\n");
         return 1;
     }
 
-    if(strcmp(argv[1], "c") != 0 && strcmp(argv[1], "f") != 0)
+    if (strcmp(argv[1], "c") != 0 && strcmp(argv[1], "f") != 0)
     {
         printf("usage: temperature c/f\n");
         return 2;
@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 
         c = (f - 32) * 5 / 9;
 
-        printf("Your temperature in celcius is:%.1f\n", c);
+        printf("Your temperature in celcius is %.1f\n", c);
 
         return 0;
     }
@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
 
         f = (c * 9/5) + 32;
 
-        printf("Your temperature in fahrenheit is:%.1f\n", f);
+        printf("Your temperature in fahrenheit is %.1f\n", f);
 
         return 0;
     }
