@@ -1,26 +1,26 @@
 #include <stdio.h>
-typedef int myint;
 
-int main (void)
+int main(void)
 {
-    typedef struct {
-        
-        char name[20];
-        myint age;
-        char gpa;
-    } student;
+  typedef struct{
+	  int score;
+	  char*name;
+  }student;
 
-    
+  int n;
 
-    student st[3];
+  printf("number of students:");
+  scanf("%i",&n);
+  student student[n].score;
 
-    for (myint i = 0; i < 3; i++)
-    {
-        st[i].age = 15 + i;
-
-        printf ("%i\n", st[i].age);
-
-    }
-
+  for (int i = 0; i < n; i++)
+  {
+	printf("Student %i score:",i+1);
+	scanf("%i",student[i].score);
+  }
+  
+  int mean = student[n].score / n;
+  printf("%i\n", mean);
 }
-    
+
+
