@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 
         c = (f - 32) * 5 / 9;
 
-        printf("Your temperature in celcius is %.1f\n", c);
+        printf("The temperature in celcius is %.1f\n", c);
         return 0;
     }
 
@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 
         f = (c * 9/5) + 32;
 
-        printf("Your temperature in fahrenheit is %.1f\n", f);
+        printf("The temperature in fahrenheit is %.1f\n", f);
         return 0;
     }
 }
